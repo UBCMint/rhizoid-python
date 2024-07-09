@@ -1,0 +1,3 @@
+# OpenBCI
+
+The code in this folder is for working with the OpenBCI headset. Currently, the server leverages code from this repo and only works with the OpenBCI repo. A future change will move the code for the OpenBCI headset to a different github repo and must be downloaded prior to using the server. This will enable for modularized code and will enable developers to plug and play with different connectors.

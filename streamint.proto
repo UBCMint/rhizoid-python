@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package streamint;
+
+message StreamIntRequest {
+    int32 value = 1;
+}
+
+message StreamIntResponse {
+    int32 result = 1;
+    bool received = 2;
+}
+
+service StreamIntService {
+    rpc StreamInt(StreamIntRequest) returns (stream StreamIntResponse);
+}
