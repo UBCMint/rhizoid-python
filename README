@@ -1,0 +1,34 @@
+# Docker Support for MOSS Python Backend
+
+## Steps to Use Docker Environment
+
+1. **Build the Docker Image**:
+
+    ```sh
+    docker build -t moss-python-backend:latest .
+    ```
+
+2. **Run the Docker Container**:
+
+    ```sh
+    docker run -d -p 6000:6000 -p 50051:50051 --privileged --name moss-python-backend moss-python-backend:latest
+    ```
+
+3. **Access the Docker Environment**:
+
+    ```sh
+    docker exec -it moss-python-backend /bin/bash
+    ```
+
+4. **Run the Python Script**:
+
+    Inside the Docker environment, run the following command to start the main Python server:
+
+    ```sh
+    python main.py --port /dev/tty0
+    ```
+
+## Ports
+
+- **6000**: Main server port
+- **50051**: gRPC server port
